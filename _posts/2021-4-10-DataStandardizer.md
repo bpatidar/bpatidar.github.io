@@ -6,10 +6,15 @@ Data quality is utmost important in Master Data Management (MDM) solutions. The 
 
 Standardizing incoming data manually is a major customer pain point that we look to solve.
 
-<b>The research questions we solve are: </b></br>
-Can we build a solution that standardizes the data for every customer without hand crafting rules for each of them? </br>
-Can we ensure that ‘nike’ gets corrected to ‘nice’ for all customers except ‘Nike’ customer? </br>
-Can this solution be domain portable? </br>
+
+
+
+
+
+> <b>The research questions we solve are: </b>. 
+> 1. Can we build a solution that standardizes the data for every customer without hand crafting rules for each of them?  
+> 2. Can we ensure that ‘nike’ gets corrected to ‘nice’ for all customers except ‘Nike’ customer?  
+> 3. Can this solution be domain portable?  
 
 ## Related Work
 Statistical based Peter Norvig’s spell corrector is a popular approach. However, it becomes computationally intensive when a word has more than 3 chars out of place. With advancements in NLP and Deep Neural Network (DNN)s, this problem could be solved by embedding meaning into the words. Word2Vec and GloVe pretrained model learnt from billions of words and phrases provide embeddings. However, more than 40% of words in our dataset, fell out of vocabulary (OOV) from these pretrained models. This impaired any further work on using pretrained word embeddings.  </br>
