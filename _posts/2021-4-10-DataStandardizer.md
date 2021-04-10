@@ -1,3 +1,8 @@
+# Data Standardizer in Master Data Management Solution
+This paper desribes our approach to address data quality problems for our product IBM Product Master. I woudln't say that this approach solves all the data quality problems, works all the time and would work for all too. Just that this approach is taking us ahead and we are continuing to improve the features. 
+
+This article was presented **@GHCI2021** and also won the white paper challenge **@IntuitWiTech**.
+
 ## Introduction
 
 Data quality is utmost important in Master Data Management (MDM) solutions. The Import/export features bring data in bulk. This data contains many inconsistencies. Data inconsistencies could be typos, colloquial acronyms, non-standardized variants etc. MDM Customers are from varied domains such as retail, telecom, pharmaceuticals, manufacturing. Each customer has specific data naming conventions. Suppliers/third-party vendors do not adhere to such conventions. They import products with inconsistent naming patterns, including typos in the data fields. A team of merchandizers, supplier managers, product managers and catalog editors spend multiple cycles curating the data before it gets on-boarded on catalogs.\
