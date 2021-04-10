@@ -5,10 +5,10 @@ Data quality is utmost important in Master Data Management (MDM) solutions. The 
 Standardizing incoming data manually is a major customer pain point that we look to solve.
 
 <a href="url"><img src="{{ site.baseurl }}/images/data_standardizer/table1.png" align="left" height="150" width="400" ></a>
-\
-\
-\
-\
+<br />
+<br />
+<br />
+<br />
 > **The research questions we solve are:**.  
 > 1. Can we build a solution that standardizes the data for every customer without hand crafting rules for each of them?  
 > 2. Can we ensure that ‘nike’ gets corrected to ‘nice’ for all customers except ‘Nike’ customer?  
@@ -28,7 +28,8 @@ To train DNNs, noise was added on datasets (typos such as phonetic errors (‘gr
 1. A char based seq-2-seq encoder decoder model with bidirectional LSTM and attention.  
 2. Attention based Transformers
 3. Our approach (described in Approach section next)
- 
+/
+/
 #### Results
 The encoder decoder model learned standardization patterns well. However, the limitations could not be ignored.
 * For training the model, samples of non-standardized versions are required along with the expected version of the samples. 
@@ -52,7 +53,8 @@ We apply a two-stage process to build a robust model that outperforms all the st
 * For every word, create pairs of size n to capture context. 
 * Train a neural network that predicts a word, given context words 
 * We use this model to recommend top m probable candidate words, given a context of words for replacing detected non-standardized word(s)
- 
+
+/
 #### Stage 2 :
 * Choose the most similar word to the OOV word, within a fixed threshold.
 * We used the edit distance to compute similarity, which worked better than cosine similarity. Using an ensemble of similarity algorithms helps based on the use cases in domains.
