@@ -1,7 +1,9 @@
 ## Introduction
 
-Data quality is utmost important in Master Data Management (MDM) solutions. The Import/export features bring data in bulk. This data contains many inconsistencies. Data inconsistencies could be typos, colloquial acronyms, non-standardized variants etc. MDM Customers are from varied domains such as retail, telecom, pharmaceuticals, manufacturing. Each customer has specific data naming conventions. Suppliers/third-party vendors do not adhere to such conventions. They import products with inconsistent naming patterns, including typos in the data fields. A team of merchandizers, supplier managers, product managers and catalog editors spend multiple cycles curating the data before it gets on-boarded on catalogs.  
-Standardizing incoming data manually is a major customer pain point that we look to solve.
+Data quality is utmost important in Master Data Management (MDM) solutions. The Import/export features bring data in bulk. This data contains many inconsistencies. Data inconsistencies could be typos, colloquial acronyms, non-standardized variants etc. MDM Customers are from varied domains such as retail, telecom, pharmaceuticals, manufacturing. Each customer has specific data naming conventions. Suppliers/third-party vendors do not adhere to such conventions. They import products with inconsistent naming patterns, including typos in the data fields. A team of merchandizers, supplier managers, product managers and catalog editors spend multiple cycles curating the data before it gets on-boarded on catalogs.
+<br>Standardizing incoming data manually is a major customer pain point that we look to solve.
+
+
 ![Table 1:]({{ site.baseurl }}/images/data_standardizer/table1.png)
 
 The research questions we solve are: 
@@ -39,6 +41,7 @@ After trying sota techniques, we moved on to a simple approach. With it, our tra
 
 ## Approach
 We apply a two-stage process to build a robust model that outperforms all the state of art techniques on our chosen datasets. In the first stage, a neural network learns the contextual meaning of words in the data. Given ‘n’ context words (window size = n), it predicts top m words that comes in the same context. In the second stage, similarity of the predicted words with the misspelt/non-standardized word is computed, to zero down on the replacement. 
+
 ![Overview]({{ site.baseurl }}/images/data_standardizer/Fig1.png)
 
 #### Stage 1 :
