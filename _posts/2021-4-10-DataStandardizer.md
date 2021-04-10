@@ -1,9 +1,11 @@
 ## Introduction
 
 Data quality is utmost important in Master Data Management (MDM) solutions. The Import/export features bring data in bulk. This data contains many inconsistencies. Data inconsistencies could be typos, colloquial acronyms, non-standardized variants etc. MDM Customers are from varied domains such as retail, telecom, pharmaceuticals, manufacturing. Each customer has specific data naming conventions. Suppliers/third-party vendors do not adhere to such conventions. They import products with inconsistent naming patterns, including typos in the data fields. A team of merchandizers, supplier managers, product managers and catalog editors spend multiple cycles curating the data before it gets on-boarded on catalogs.\
+\
 Standardizing incoming data manually is a major customer pain point that we look to solve.
 
-<a href="url"><img src="{{ site.baseurl }}/images/data_standardizer/table1.png" align="left" height="150" width="400" ></a> \
+<a href="url"><img src="{{ site.baseurl }}/images/data_standardizer/table1.png" align="left" height="150" width="400" ></a>
+\
 \
 \
 \
@@ -13,7 +15,7 @@ Standardizing incoming data manually is a major customer pain point that we loo
 > 3. Can this solution be domain portable?  
 
 ## Related Work
-Statistical based Peter Norvig’s spell corrector is a popular approach. However, it becomes computationally intensive when a word has more than 3 chars out of place. With advancements in NLP and Deep Neural Network (DNN)s, this problem could be solved by embedding meaning into the words. Word2Vec and GloVe pretrained model learnt from billions of words and phrases provide embeddings. However, more than 40% of words in our dataset, fell out of vocabulary (OOV) from these pretrained models. This impaired any further work on using pretrained word embeddings.  </br>
+Statistical based Peter Norvig’s spell corrector is a popular approach. However, it becomes computationally intensive when a word has more than 3 chars out of place. With advancements in NLP and Deep Neural Network (DNN)s, this problem could be solved by embedding meaning into the words. Word2Vec and GloVe pretrained model learnt from billions of words and phrases provide embeddings. However, more than 40% of words in our dataset, fell out of vocabulary (OOV) from these pretrained models. This impaired any further work on using pretrained word embeddings. \
 We explored state-of-the-art techniques in NLP to build a neural machine translation where a non-standardized sentence provided by supplier gets translated to a standardized version. The results were promising but DNNs come with their own challenges. More details in the experiments section. For our use case, the vocabulary was much smaller and strictly based on closed domains. The variations and typos were related to only these vocabulary words. We thus, moved on to build a simple model that learns its context from the data and picks up patterns of standardization.
 
 
