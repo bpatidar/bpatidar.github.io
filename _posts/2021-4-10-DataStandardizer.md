@@ -1,12 +1,11 @@
 ## Introduction
 
 Data quality is utmost important in Master Data Management (MDM) solutions. The Import/export features bring data in bulk. This data contains many inconsistencies. Data inconsistencies could be typos, colloquial acronyms, non-standardized variants etc. MDM Customers are from varied domains such as retail, telecom, pharmaceuticals, manufacturing. Each customer has specific data naming conventions. Suppliers/third-party vendors do not adhere to such conventions. They import products with inconsistent naming patterns, including typos in the data fields. A team of merchandizers, supplier managers, product managers and catalog editors spend multiple cycles curating the data before it gets on-boarded on catalogs.\
-\
-Standardizing incoming data manually is a major customer pain point that we look to solve.
-
 <a href="url"><img src="{{ site.baseurl }}/images/data_standardizer/table1.png" align="left" height="150" width="400" ></a>
 <br />
 <br />
+\
+Standardizing incoming data manually is a major customer pain point that we look to solve.
 <br />
 <br />
 > **The research questions we solve are:**.  
@@ -22,14 +21,15 @@ We explored state-of-the-art techniques in NLP to build a neural machine transla
 ## Experiments and Results
 #### Datasets
 We crawled the product details from catalogs on public websites for 3 customers from pharmaceutical, retail and electronic domains. The datasets consisted of 10K product descriptions with an average of around 10 words in each description.
- 
+
+
 #### Experiments
 To train DNNs, noise was added on datasets (typos such as phonetic errors (‘great’, ‘g8’ and iphone, ifone), misplaced chars, standardization errors) and a corpus containing both error and it’s expected version of sentences was built. For our tests, we compared results/ performance on 3 approaches. 
 1. A char based seq-2-seq encoder decoder model with bidirectional LSTM and attention.  
 2. Attention based Transformers
 3. Our approach (described in Approach section next)
-/
-/
+
+
 #### Results
 The encoder decoder model learned standardization patterns well. However, the limitations could not be ignored.
 * For training the model, samples of non-standardized versions are required along with the expected version of the samples. 
@@ -54,7 +54,7 @@ We apply a two-stage process to build a robust model that outperforms all the st
 * Train a neural network that predicts a word, given context words 
 * We use this model to recommend top m probable candidate words, given a context of words for replacing detected non-standardized word(s)
 
-/
+
 #### Stage 2 :
 * Choose the most similar word to the OOV word, within a fixed threshold.
 * We used the edit distance to compute similarity, which worked better than cosine similarity. Using an ensemble of similarity algorithms helps based on the use cases in domains.
