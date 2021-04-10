@@ -4,7 +4,7 @@ Data quality is utmost important in Master Data Management (MDM) solutions. The 
 <br>Standardizing incoming data manually is a major customer pain point that we look to solve.
 
 
-![Table 1|100x100]({{ site.baseurl }}/images/data_standardizer/table1.png)
+![Table 1 | 100x100]({{ site.baseurl }}/images/data_standardizer/table1.png)
 
 The research questions we solve are: 
 Can we build a solution that standardizes the data for every customer without hand crafting rules for each of them? 
