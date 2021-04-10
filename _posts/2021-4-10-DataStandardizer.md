@@ -1,9 +1,13 @@
 ## Introduction
 
 Data quality is utmost important in Master Data Management (MDM) solutions. The Import/export features bring data in bulk. This data contains many inconsistencies. Data inconsistencies could be typos, colloquial acronyms, non-standardized variants etc. MDM Customers are from varied domains such as retail, telecom, pharmaceuticals, manufacturing. Each customer has specific data naming conventions. Suppliers/third-party vendors do not adhere to such conventions. They import products with inconsistent naming patterns, including typos in the data fields. A team of merchandizers, supplier managers, product managers and catalog editors spend multiple cycles curating the data before it gets on-boarded on catalogs.\
+\
 <a href="url"><img src="{{ site.baseurl }}/images/data_standardizer/table1.png" align="left" height="150" width="400" ></a>
 <br />
 <br />
+\
+\
+\
 \
 Standardizing incoming data manually is a major customer pain point that we look to solve.
 <br />
