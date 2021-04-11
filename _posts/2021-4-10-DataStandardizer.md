@@ -3,6 +3,8 @@ This paper desribes our approach to address data quality problems for our produc
 
 This article was presented **@GHCI2021** and also won the white paper challenge **@IntuitWiTech**.
 
+![Overall Solution in Action!]({{ site.baseurl }}/images/data_standardizer/standardization.gif)
+
 ## Introduction
 
 Data quality is utmost important in Master Data Management (MDM) solutions. The Import/export features bring data in bulk. This data contains many inconsistencies. Data inconsistencies could be typos, colloquial acronyms, non-standardized variants etc. MDM Customers are from varied domains such as retail, telecom, pharmaceuticals, manufacturing. Each customer has specific data naming conventions. Suppliers/third-party vendors do not adhere to such conventions. They import products with inconsistent naming patterns, including typos in the data fields. A team of merchandizers, supplier managers, product managers and catalog editors spend multiple cycles curating the data before it gets on-boarded on catalogs.\
@@ -68,8 +70,6 @@ We apply a two-stage process to build a robust model that outperforms all the st
 * Choose the most similar word to the OOV word, within a fixed threshold.
 * We used the edit distance to compute similarity, which worked better than cosine similarity. Using an ensemble of similarity algorithms helps based on the use cases in domains.
 * If none of the recommended words match within a set threshold with the detected non-standardized word, the word was left as is and the record was marked for manual review. 
-
-![Overall Solution in Action!]({{ site.baseurl }}/images/data_standardizer/standardization.gif)
 
 
 ## Conclusion
