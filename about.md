@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-Hey All, this is my blogging page. Work in progress!! :) 
+Hey All, this is my blogging page. This is work in progress!! :) 
 
 ### More Information
 
