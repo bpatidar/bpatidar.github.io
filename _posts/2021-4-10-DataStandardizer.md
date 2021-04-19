@@ -81,3 +81,11 @@ This solution can easily learn complex patterns and mitigate the challenges of b
 ## Contributions
 Google Word2vec model is trained on 3 billion words. This training is on news dataset which is totally different to the domain we are working in. Through our work, we share a very important learning to all our practitioners that more than using a latest sophisticated technique, focus must be on understanding our systems, its’ needs and available data. This understanding will help bring out solutions that are efficient, cost-effective and best fit.  
 Our model is lighter than the latest deep learning models, has outperformed them on our tests and gives similar results across different domains. We have successfully integrated this model in our product as data standardization feature that went live on May 2020.
+
+## References
+[1] Peter Norvig: https://norvig.com/spell-correct.html
+[2] Stanford GloVe: https://nlp.stanford.edu/pubs/glove.pdf
+[3] Google Word2Vec: https://arxiv.org/pdf/1310.4546.pdf
+[4] The Annotated transformer: https://nlp.seas.harvard.edu/2018/04/03/attention.html
+[5] Sequence to Sequence Learning with Neural Networks: https://arxiv.org/pdf/1409.3215.pdf
+[6] Google’s Neural machine Translation System: https://research.google/pubs/pub45610/
