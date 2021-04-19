@@ -83,7 +83,7 @@ Google Word2vec model is trained on 3 billion words. This training is on news da
 Our model is lighter than the latest deep learning models, has outperformed them on our tests and gives similar results across different domains. We have successfully integrated this model in our product as data standardization feature that went live on May 2020.
 
 ## References
-[1] Peter Norvig: https://norvig.com/spell-correct.html \
+[1] Peter Norvig: https://norvig.com/spell-correct.html what<br \>
 [2] Stanford GloVe: https://nlp.stanford.edu/pubs/glove.pdf \
 [3] Google Word2Vec: https://arxiv.org/pdf/1310.4546.pdf \
 [4] The Annotated transformer: https://nlp.seas.harvard.edu/2018/04/03/attention.html \
